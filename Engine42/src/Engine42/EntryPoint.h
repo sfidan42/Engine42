@@ -6,6 +6,10 @@ extern	Engine42::Application* Engine42::CreateApplication(void);
 
 int	main(void)
 {
+	Engine42::Log::Init();
+	ENGINE_WARN("Initialized Log!");
+	APP_INFO("Hello Var = {}", 5);
+
 	auto app = Engine42::CreateApplication();
 	app->Run();
 	delete app;
